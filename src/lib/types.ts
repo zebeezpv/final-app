@@ -1,0 +1,16 @@
+export type Course={code:string;name:string};
+export type Semester={name:string;start:string;end:string;weeklyGoal:number};
+export type TimetableItem={id:string;day:string;time:string;course:string;type:string;venue:string};
+export type Assessment={id:string;date:string;course:string;title:string;type:string;priority:'Low'|'Medium'|'High';status:'Not Started'|'In Progress'|'Submitted'};
+export type Study={id:string;date:string;course:string;topic:string;hours:number};
+export type Mark={id:string;course:string;name:string;weight:number;mark:number};
+export type Budget={id:string;kind:'Income'|'Expense';description:string;amount:number;date:string};
+export type Task={id:string;course:string;title:string;due:string;priority:string;done:boolean};
+export type Goal={id:string;course:string;title:string;target:string;done:boolean};
+export type Attendance={id:string;date:string;course:string;classType:string;attended:boolean};
+export type Note={id:string;course:string;title:string;body:string;created:string};
+export type Resource={id:string;course:string;title:string;url:string;kind:string};
+export type Revision={id:string;course:string;topic:string;target:string;confidence:number;done:boolean};
+export type Reminder={id:string;date:string;time:string;course:string;title:string;repeat:string};
+export type Habit={id:string;emoji:string;name:string;checks:Record<string,boolean>};
+export type AppData={courses:Course[];semester:Semester;timetable:TimetableItem[];assessments:Assessment[];study:Study[];marks:Mark[];budget:Budget[];tasks:Task[];goals:Goal[];attendance:Attendance[];notes:Note[];resources:Resource[];revision:Revision[];reminders:Reminder[];habits:Habit[];archives:any[]};
