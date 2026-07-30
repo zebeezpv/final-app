@@ -1,9 +1,0 @@
-import type {AppData} from './types';
-const id=()=>crypto.randomUUID();
-export const sample:AppData={
- courses:[{code:'CSC2002S',name:'Computer Science'},{code:'INF2011S',name:'Information Systems'},{code:'ACC1022Z',name:'Accounting'},{code:'PHI2043S',name:'Philosophy'},{code:'CML1001S',name:'Commercial Law'}],
- semester:{name:'Semester 2 • 2026',start:'2026-07-27',end:'2026-10-30',weeklyGoal:20},archives:[],
- timetable:[['Monday','09:00–10:00','CSC2002S','Lecture','NEW LT'],['Monday','11:00–12:00','INF2011S','Lecture','NEW LT'],['Tuesday','09:00–10:00','CSC2002S','Lecture','NEW LT'],['Tuesday','10:00–11:00','PHI2043S','Lecture','LS2A'],['Tuesday','13:00–14:00','ACC1022Z','Lecture','Hahn 2'],['Thursday','11:00–13:00','INF2011S','Workshop Session 2 / Team 2','CSC203'],['Thursday','14:00–15:00','PHI2043S','Tutorial TG17','Hahn 3'],['Friday','11:00–12:45','ACC1022Z','Tutorial TG21','LCOM 2G'],['Friday','14:00–16:00','INF2011S','Programming Workshop','Alumni Labs']].map(x=>({id:id(),day:x[0],time:x[1],course:x[2],type:x[3],venue:x[4]})),
- assessments:[['2026-08-14','INF2011S','Theory Test 1','Test'],['2026-08-20','CSC2002S','Test 1','Test'],['2026-08-24','CSC2002S','PCP1 Due','Assignment'],['2026-08-25','PHI2043S','Essay Due','Essay'],['2026-09-17','INF2011S','Project Part 1 Due','Project'],['2026-09-23','ACC1022Z','Final Exam','Exam'],['2026-10-08','CSC2002S','Test 2','Test']].map(x=>({id:id(),date:x[0],course:x[1],title:x[2],type:x[3],priority:'High' as const,status:'Not Started' as const})),
- study:[],marks:[],tasks:[],goals:[],attendance:[],notes:[],resources:[],revision:[],reminders:[],habits:[{id:id(),emoji:'📚',name:'Review notes',checks:{}},{id:id(),emoji:'✅',name:'Plan tomorrow',checks:{}},{id:id(),emoji:'💧',name:'Drink water',checks:{}}],
-};
